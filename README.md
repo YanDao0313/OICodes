@@ -4,10 +4,14 @@
 
 ## Note
 
-noi training codes backup
+**noi training codes backup**  
+Gitee is only for backup usage. I use it because I can't access GitHub in our school.
 
-Gitee is only for backup usage. I use it because i can't access GitHub in our school.
+## Accounts
 
 Open Judge: [Kris Yan](http://openjudge.cn/user/1341523/)  
 Luogu: [krisyan](https://www.luogu.com.cn/user/1124126)  
+
+## Tip
+
 **I AM JUST A BEGINNER**
