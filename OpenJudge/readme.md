@@ -1,3 +1,3 @@
 # OpenJudge
 
-http://noi.openjudge.cn/
+[noi.openjudge.cn](http://noi.openjudge.cn/)
