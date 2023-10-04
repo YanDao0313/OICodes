@@ -1,4 +1,4 @@
-# OICodes
+# OI Codes
 
 ![shirokoSUKI](https://cdn.luogu.com.cn/upload/image_hosting/j3njc5q3.png)
 
