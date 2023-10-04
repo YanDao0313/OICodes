@@ -1,32 +1,31 @@
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
-int m,n,x,i,j,k,ans,l;
-int ex[10086][210],a[10086][210];
-
+int a[10000+50][150],b[10000+50][150];
+int n,m,x;
+int sum;
 int main() {
 	cin>>n>>m;
-	for(i=1; i<=n; i++) {
-		l=0;
-		for(j=0; j<m; j++) {
-			scanf("%d%d",&ex[i][j],&a[i][j]);
-			if(ex[i][j]==1) l++;
+	for(int i=1; i<=n; i++) {
+		for(int j=0; j<m; j++) {
+			cin>>b[i][j]>>a[i][j];
+			if(b[i][j]==1)b[i][m]++;
 		}
-		ex[i][m]=l;
 	}
-	scanf("%d",&x);
-	i=1;
-	while (i<=n) {
-		ans+=a[i][x];
-		ans%=20123;
-		for (j=x; ; j++) {
-			if(j==m) j=0;
-			if(ex[i][j]==1) k++;
-			if(k==(a[i][x]-1)%ex[i][m]+1) break;
-			x=j;
-			i++;
+	cin>>x;
+	for(int i=1; i<=n; i++) {
+		int k=a[i][x];
+		sum=(sum+k)%20123;
+		k=k%b[i][m]+b[i][m];
+		int t=0;
+		for(int j=1; 1; j++) {
+			if(b[i][x]==1)t++;
+			if(t==k)break;
+			x++;
+			x%=m;
 		}
-		printf("%d",ans);
-		return 0;
+
 	}
+	cout<<sum;
+	return 0;
 }
