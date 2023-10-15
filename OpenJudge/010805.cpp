@@ -1,29 +1,33 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int a[6][6],maxh[6],h[6],minl[6],l[6];
+int a[10][10],maxh[10],loh[10],minl[10],lol[10];
 
 int main() {
-	for (int i=0; i<5; i++) {
-		for (int j=0; j<5; j++) {
+	for (int i=0; i<11; i++) {
+		maxh[i]--;
+		minl[i]=99999;
+	}
+	for (int i=1; i<6; i++) { //iÐÐ jÁÐ
+		for (int j=1; j<6; j++) {
 			cin>>a[i][j];
-			if (maxh[i]<a[i][j]) {
-				maxh[i]=a[i][j]; //i>ËùÔÚÐÐ j>ËùÔÚÁÐ 
-				h[i]=j;
+			if (a[i][j]>maxh[i]) {
+				maxh[i]=a[i][j];
+				loh[i]=j;
 			}
 		}
 	}
-	for (int i=0; i<5; i++) {
-		for (int j=0; j<5; j++) {
-			if (minl[i]>a[j][i]) {
-				minl[i]=a[j][i]; //i>ËùÔÚÁÐ j>ËùÔÚÐÐ 
-				l[i]=j;
+	for (int j=1; j<6; j++) { //iÐÐ jÁÐ 
+		for (int i=1; i<6; i++) {
+			if (a[i][j]<minl[j]) {
+				minl[j]=a[i][j];
+				lol[j]=i;
 			}
 		}
 	}
-	for (int i=0; i<5; i++) {
-		if (l[h[i]]==i) {
-			cout<<i<<' '<<h[i]<<' '<<a[i][h[i]];
+	for (int i=1; i<6; i++) {
+		if (lol[loh[i]]==i) {
+			cout<<i<<' '<<loh[i]<<' '<<a[i][loh[i]];
 			return 0;
 		}
 	}
