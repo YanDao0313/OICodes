@@ -1,19 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int m,n;
-bool l[100010];
+int n,m,l[100010];
 
 int main() {
 	cin>>n>>m;
-	for (int i1=1; i1<=n; i1++) {
-		for (int i2=1; i2<=m; i2++) {
-			if (i1%i2==0) l[i1]=!l[i1];
-		}
-	}
 	cout<<'1';
-	for (int ii=2; ii<=n; ii++) {
-		if (l[ii]) cout<<','<<ii;
+	for (int i=2; i<=m; i++) {
+		for (int j=1; i*j<=n; j++)
+			l[i*j]++;
 	}
+	for (int i=2; i<=n; i++)
+		if (l[i]%2==0) cout<<','<<i;
 	return 0;
 }
