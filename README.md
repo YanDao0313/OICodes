@@ -5,7 +5,7 @@
 ## Note
 
 **noi training codes backup**  
-Gitee is only for backup usage. I use it because I can't access GitHub in our school.
+Gitee is only for backup usage. I use it since I can't access GitHub in our school.
 
 ## Accounts
 
