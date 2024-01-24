@@ -25,7 +25,7 @@ void bfs() {
 			int ty = now.y + ss[i][1];
 			if (ty < 1 || tx < 1 || ty > n || tx > m)
 				continue;
-			if (b[ty][tx] == 0) {
+			if (a[ty][tx] == 0 && b[ty][tx] == 0) {
 				q.push((node) {
 					ty, tx
 				});
@@ -48,6 +48,11 @@ int main() {
 				a[i][j] = 1;
 		}
 	}
+	/*for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= m; j++)
+			cout << a[i][j] << ' ';
+		cout << endl;
+	}*/
 	q.push((node) {
 		1, 1
 	});
