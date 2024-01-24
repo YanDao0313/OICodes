@@ -15,12 +15,11 @@ void dfs(int y, int x) {
 	for (int i = 0; i < 4; i++) {
 		int tx = x + ss[i][0];
 		int ty = y + ss[i][1];
-		if (tx < 1 || ty < 1 || tx > m || ty > n)
+		if (tx < 1 || ty < 1 || tx > m || ty > n || a[ty][tx] == 1)
 			continue;
 		if (b[ty][tx] == 0) {
 			b[ty][tx] = 1;
 			dfs(ty, tx);
-			b[ty][tx] = 0;
 		}
 	}
 }
@@ -38,6 +37,11 @@ int main() {
 				a[i][j] = 1;
 		}
 	}
+	/*for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= m; j++)
+			cout << a[i][j] << ' ';
+		cout << endl;
+	}*/
 	dfs(1, 1);
 	if (flg)
 		cout << "Yes";
