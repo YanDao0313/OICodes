@@ -13,6 +13,7 @@ Open Judge: [Kris Yan](http://openjudge.cn/user/1341523/)
 Luogu: [krisyan](https://www.luogu.com.cn/user/1124126)  
 UVa: [krisyan](https://onlinejudge.org/)  
 Hydro OJ: [Kris Yan](https://hydro.ac/user/40219)  
+Codeforces: [krisyan](https://codeforces.com/profile/krisyan)  
 MSOJ: krisyan
 
 ## Tip
